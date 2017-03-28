@@ -1,0 +1,28 @@
+<ion-view view-title="Get Estimate">
+  <ion-content>
+      <div class="row header">
+        <div class="col">Item</div>
+        <div class="col">Quantity</div>
+        <div class="col">Total</div>
+      </div>
+      <div class="row" ng-repeat="item in list">
+        <div class="col">{{item.title}}</div>
+        <div class="col"><input ng-model="item.val" type="number" min="0" max="{{item.max}}" step="1"/></div>
+        <div class="col">{{item.val * item.perUnit}}</div>
+      </div>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col">GRAND TOTAL</div>
+        <div class="col">{{total()}}</div>
+      </div>
+  </ion-content>
+  <!-- <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
+        {{playlist.title}}
+      </ion-item>
+      <ion-item>Total
+      </ion-item>
+    </ion-list>
+  </ion-content> -->
+</ion-view>

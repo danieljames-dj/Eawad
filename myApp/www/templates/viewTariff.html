@@ -1,0 +1,12 @@
+<ion-view view-title="Get Estimate">
+  <ion-content>
+      <div class="row header">
+        <div class="col">Item</div>
+        <div class="col">Price per unit</div>
+      </div>
+      <div class="row" ng-repeat="item in list">
+        <div class="col">{{item.title}}</div>
+        <div class="col">{{item.perUnit}}</div>
+      </div>
+  </ion-content>
+</ion-view>
